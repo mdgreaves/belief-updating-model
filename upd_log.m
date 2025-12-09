@@ -13,7 +13,7 @@ function [mu_nat, sd_nat, cov_nat] = upd_log(muPhi, SigmaPhi)
 %
 % AUTHOR / DATE
 %   Matthew D. Greaves, University of Melbourne. 
-%   Last updated: 25/10/2025.
+%   Last updated: 25/11/2025.
 
 muPhi = muPhi(:);
 n = numel(muPhi);
