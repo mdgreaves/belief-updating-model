@@ -17,7 +17,7 @@ function [posterior, out, yhat] = upd_invert(y, U, varargin)
 %
 % AUTHOR / DATE
 %   Matthew D. Greaves, University of Melbourne. 
-%   Last updated: 25/10/2025.
+%   Last updated: 25/11/2025.
 
 % ---- Parse options ------------------------------------------------------
 p = inputParser;
