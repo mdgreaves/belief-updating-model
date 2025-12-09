@@ -31,7 +31,7 @@ function p_bpa = upd_ffx_bpa(posts, field)
 %
 % AUTHOR / DATE
 %   Matthew D. Greaves, University of Melbourne. 
-%   Last updated: 25/10/2025.
+%   Last updated: 25/11/2025.
 
     if nargin < 2 || isempty(field), field = 'Phi'; end
 
