@@ -63,7 +63,7 @@
 %
 % AUTHOR / DATE
 %   Matthew D. Greaves, University of Melbourne. 
-%   Last updated: 25/10/2025.
+%   Last updated: 25/11/2025.
 %==========================================================================
 
 % -------------------------------------------------------------------------
@@ -130,7 +130,7 @@ pE        = log([1/128; 1/128]);    % Prior expectation
 pC        = diag([1/4,1/4]);        % Prior covariance
 M         = 3;                      % Number of models (M1, M2, M3)
 px        = flip(1:M);              % Parameter selector
-N         = 20;                    % Monte Carlo repetitions per model
+N         = 20;                     % Monte Carlo repetitions per model
 F         = zeros(N, M, M);         % [rep, sim_model, cand_model]
 
 for sm = 1:M
@@ -190,8 +190,8 @@ for i = 1:size(Pv,1)
 end
 BR  = U(1,:)';                  % Base rate
 E1  = U(2,:)';                  % Initial estimate
-V   = U(3,:)';                  % Stimulus valence
-N   = sign(E1 - BR) .* V;       % Feedback valence
+V   = U(3,:)';                  % Stimulus valenceaddpath
+N   = sign(BR - E1) .* V;       % Feedback valence
 
 % Font parameters
 axis_font_size  = 18;
