@@ -22,7 +22,7 @@ function upd_fig(BR, E1, E2, V, N, lgd_flag)
 %
 % SIGN CONVENTIONS (for reference)
 %   Feedback valence N is typically computed as:
-%       N = sign(E1 - BR) .* V
+%       N = sign(BR - E1) .* V
 %   (i.e., whether the base rate implies “better/worse than expected”
 %    given the stimulus valence). This function accepts N precomputed.
 %
@@ -49,7 +49,7 @@ function upd_fig(BR, E1, E2, V, N, lgd_flag)
 %   E1 = 100*rand(T,1);
 %   E2 = 100*rand(T,1);
 %   V  = randsrc(T,1,[-1 1; 0.5 0.5]);                 % ±1
-%   N  = sign(E1 - BR) .* V;                           % feedback valence
+%   N  = sign(BR - E1) .* V;                           % feedback valence
 %   figure; upd_fig(BR, E1, E2, V, N, true);
 %
 % NOTES
@@ -60,7 +60,7 @@ function upd_fig(BR, E1, E2, V, N, lgd_flag)
 %
 % AUTHOR / DATE
 %   Matthew D. Greaves, University of Melbourne. 
-%   Last updated: 25/10/2025.
+%   Last updated: 25/11/2025.
 %==========================================================================
 
 % Define colours for stimulus valence
