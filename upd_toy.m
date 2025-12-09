@@ -5,7 +5,7 @@
 %   This helper script generates toy belief-updating data for S subjects
 %   over T trials, using the static learning model with user-defined
 %   “true” parameters. The outputs are stored in cell arrays formatted
-%   exactly as required by the empirical analysis script (upd_empirical.m).
+%   exactly as required by the empirical analysis script (upd_data_bmc.m).
 %
 % DESCRIPTION
 %   - Simulates trial-by-trial base rates (BR), first estimates (E1),
@@ -26,7 +26,7 @@
 %
 % AUTHOR / DATE
 %   Matthew D. Greaves, University of Melbourne. 
-%   Last updated: 25/10/2025.
+%   Last updated: 25/11/2025.
 %==========================================================================
 
 % Toy synthetic data for S=5 subjects, T=40 trials
