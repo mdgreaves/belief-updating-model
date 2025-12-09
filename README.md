@@ -8,7 +8,7 @@ This repository contains MATLAB code for simulating, inverting, and validating a
 
 ```
 .
-├── upd_data.m        % Empirical analysis: inversion + BPA + inference
+├── upd_data_bmc.m    % Empirical analysis: inversion + BPA + Bayesian model comparison (BMC)
 ├── upd_ffx_bpa.m     % Fixed-effects Bayesian parameter averaging (BPA)
 ├── upd_fig.m         % Helper for plotting example trials
 ├── upd_invert.m      % Wrapper for variational Bayesian analysis (VBA) model inversion
@@ -36,6 +36,7 @@ This repository contains MATLAB code for simulating, inverting, and validating a
 * Pools posteriors across subjects using fixed-effects BPA.
 * Performs posterior inference on group-level parameters (one-tailed test for positivity).
 * Reports means, standard deviations, and posterior probabilities.
+* Compares the three models at the group level using random-effects Bayesian model comparison (VBA_groupBMC), printing expected model frequencies and exceedance probabilities.
 
 ### 3. Toy Data Generation
 
@@ -54,7 +55,7 @@ upd_toy
 2. Run the empirical analysis pipeline:
 
 ```matlab
-upd_data
+upd_data_bmc
 ```
 
 3. Verify parameter recovery and model discrimination:
