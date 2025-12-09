@@ -10,7 +10,7 @@ function y = upd_model(~, P, u, ~)
 %   - Parameters: learning rate intercept (a) and bias (b)
 %
 % Model:
-%   N  = sign(E1 - BR) * V
+%   N  = sign(BR - E1) * V
 %   LR = exp(a) + N * exp(b)
 %   y  = E1 + LR * (BR - E1)
 %
@@ -31,7 +31,7 @@ function y = upd_model(~, P, u, ~)
 %
 % AUTHOR / DATE
 %   Matthew D. Greaves, University of Melbourne. 
-%   Last updated: 25/10/2025.
+%   Last updated: 25/11/2025.
 % =========================================================================
 
 % --- Unpack inputs -------------------------------------------------------
@@ -44,7 +44,7 @@ a   = P(1);       % Learning rate intercept
 b   = P(2);       % Learning rate bias
 
 % --- Compute valence-weighted learning rate ------------------------------
-N   = sign(E1 - BR) * V;    % Feedback valence
+N   = sign(BR - E1) * V;    % Feedback valence
 LR  = exp(a) + N * exp(b);  % Effective learning rate
 
 % --- Update estimate -----------------------------------------------------
