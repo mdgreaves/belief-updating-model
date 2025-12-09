@@ -11,7 +11,7 @@ function [y, U] = upd_sim(T, P, sigma, U)
 %
 % AUTHOR / DATE
 %   Matthew D. Greaves, University of Melbourne. 
-%   Last updated: 25/10/2025.
+%   Last updated: 25/11/2025.
 
 if nargin < 4 || isempty(U)
     BR = 100*rand(1,T);
